@@ -160,7 +160,7 @@ validate_args(args)
 
 branch = "main"
 if args.version != "latest":
-    branch = args.version()
+    branch = args.version
 
 toml_content = get_pyproject_toml(args.repo_url, branch)
 dependencies = get_dependencies(toml_content)
